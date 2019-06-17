@@ -1,8 +1,14 @@
 <template>
   <div>
-    <div v-for="event in events" v-bind:key="event.id">
-      <EventItem v-bind:event="event"/>
-    </div>
+    <v-card>
+      <v-container fluid grid-list-lg>
+        <v-layout row wrap>
+          <div v-for="event in events" v-bind:key="event.id">
+            <EventItem v-bind:event="event"/>
+          </div>
+        </v-layout>
+      </v-container>
+    </v-card>
   </div>
 </template>
 
