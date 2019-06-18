@@ -23,7 +23,7 @@ export default {
   props: ["event"],
   data() {
     return {
-      title: "유툽API - 제목 끌어오기",
+      title: "get title from id",
       thumbnail: "https://img.youtube.com/vi/" + this.event.videoId + "/0.jpg"
     };
   },

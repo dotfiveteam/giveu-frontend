@@ -1,45 +1,27 @@
 <template>
   <div id="app">
-    <h1>Give U</h1>
-    <hr>
-    <Events v-bind:events="events"/>
+    <v-app>
+      <!-- <v-navigation-drawer app></v-navigation-drawer> -->
+
+      <v-toolbar app>
+        <v-toolbar-title>
+          <h1>Give U</h1>
+        </v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-items class>
+          <v-btn flat to="/">이벤트</v-btn>
+          <v-btn flat to="/about">About</v-btn>
+        </v-toolbar-items>
+      </v-toolbar>
+
+      <v-content>
+        <router-view/>
+      </v-content>
+
+      <v-footer app>give me</v-footer>
+    </v-app>
   </div>
 </template>
-
-<script>
-import Events from "./components/Events";
-
-export default {
-  name: "app",
-  components: {
-    Events
-  },
-  data() {
-    return {
-      events: [
-        {
-          id: 1,
-          date: "2019-07-02",
-          finished: false,
-          videoId: "2-HAkAmdOAA"
-        },
-        {
-          id: 2,
-          date: "2019-03-23",
-          finished: true,
-          videoId: "a2GujJZfXpg"
-        },
-        {
-          id: 3,
-          date: "2019-02-12",
-          finished: true,
-          videoId: "L1BDM1oBRJ8"
-        }
-      ]
-    };
-  }
-};
-</script>
 
 <style>
 * {

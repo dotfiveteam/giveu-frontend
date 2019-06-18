@@ -2,7 +2,7 @@
   <div>
     <v-card>
       <v-container fluid grid-list-lg>
-        <v-layout row wrap>
+        <v-layout justify-center row wrap>
           <div v-for="event in events" v-bind:key="event.id">
             <EventItem v-bind:event="event"/>
           </div>
