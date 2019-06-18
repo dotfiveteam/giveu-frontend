@@ -1,15 +1,13 @@
 <template>
   <div>
-    <v-card>
-      <v-container fluid grid-list-lg>
-        <v-layout justify-center row wrap>
-          <h5>video_list_tmp['(MUTUBE)와꾸대장봉준']</h5>
-          <div v-for="event in events" v-bind:key="event.id">
-            <EventItem v-bind:event="event"/>
-          </div>
-        </v-layout>
-      </v-container>
-    </v-card>
+    <v-container fluid grid-list-lg>
+      <v-layout justify-center row wrap>
+        <h3>{{channel_name}}</h3>
+        <div v-for="video in videos" v-bind:key="video.id">
+          <EventItem v-if="video.is_donate_video" v-bind:video="video"/>
+        </div>
+      </v-layout>
+    </v-container>
   </div>
 </template>
 
@@ -21,7 +19,7 @@ export default {
   components: {
     EventItem
   },
-  props: ["events"]
+  props: ["channel_name", "videos"]
 };
 </script>
 

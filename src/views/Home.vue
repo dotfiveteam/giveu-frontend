@@ -1,12 +1,15 @@
 <template>
   <div>
-    <Events v-bind:events="video_list_tmp['(MUTUBE)와꾸대장봉준']"/>
+    <v-card>
+      <div v-for="youtube_channel in youtube_list" v-bind:key="youtube_channel.id">
+        <Events v-bind:channel_name="youtube_channel.name" v-bind:videos="youtube_channel.videos"/>
+      </div>
+    </v-card>
   </div>
 </template>
 
 <script>
 import Events from "../components/Events";
-import video_list_tmp from "../assets/video_list_tmp.json";
 
 export default {
   name: "Home",
@@ -15,8 +18,15 @@ export default {
   },
   data() {
     return {
-      video_list_tmp: video_list_tmp
+      youtube_list: null
     };
+  },
+  mounted() {
+    this.axios
+      .get("http://stolenbyte.kr:8081/api/v1/youtube/")
+      .then(response => {
+        this.youtube_list = response.data;
+      });
   }
 };
 </script>
