@@ -10,7 +10,8 @@
         <v-spacer></v-spacer>
         <v-toolbar-items class>
           <v-btn flat to="/">이벤트</v-btn>
-          <v-btn flat to="/about">About</v-btn>
+          <v-btn flat to="/rank_list">랭크리스트</v-btn>
+          <!-- <v-btn flat to="/about">About</v-btn> -->
         </v-toolbar-items>
       </v-toolbar>
 

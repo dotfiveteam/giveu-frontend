@@ -16,26 +16,6 @@ export default {
   data() {
     return {
       video_list_tmp: video_list_tmp
-      // events: [
-      //   {
-      //     id: 1,
-      //     date: "2019-07-02",
-      //     finished: false,
-      //     videoId: "2-HAkAmdOAA"
-      //   },
-      //   {
-      //     id: 2,
-      //     date: "2019-03-23",
-      //     finished: true,
-      //     videoId: "a2GujJZfXpg"
-      //   },
-      //   {
-      //     id: 3,
-      //     date: "2019-02-12",
-      //     finished: true,
-      //     videoId: "L1BDM1oBRJ8"
-      //   }
-      // ]
     };
   }
 };
