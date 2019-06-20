@@ -1,16 +1,18 @@
 <template>
   <div>
     <v-flex xs12>
-      <v-card width="50vh" v-bind:dark="video.finished">
-        <v-card-title>
-          <div class="headline">
-            <h5>{{title}}</h5>
-          </div>
-        </v-card-title>
-        <p class="ma-0 pa-0 text-xs-right">게시일: {{published_date}}</p>
-        <v-img v-bind:src="thumbnail"></v-img>
+      <v-card v-bind:dark="video.finished">
+        <v-img v-bind:src="thumbnail">
+          <v-layout pa-2 column fill-height class="white--text">
+            <v-flex shrink>
+              <v-card-title class="ma-0 pa-0">{{title}}</v-card-title>
+            </v-flex>
+            <v-spacer></v-spacer>
+            <v-card-text class="ma-0 pa-0 text-xs-right caption font-weight-thin">{{published_date}}</v-card-text>
+          </v-layout>
+        </v-img>
         <v-card-actions>
-          <v-btn outline block v-on:click="GoToVideo">구독, 좋아요, 댓글달기 ㄱㄱ</v-btn>
+          <v-btn outline block v-on:click="GoToVideo">ㄱㄱ</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>

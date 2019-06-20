@@ -18,7 +18,9 @@
         <router-view/>
       </v-content>
 
-      <v-footer app>give me</v-footer>
+      <v-footer app class="pa-3">
+        <v-spacer></v-spacer>여기 footer인데, 배너광고 ㄱㄱ?
+      </v-footer>
     </v-app>
   </div>
 </template>
