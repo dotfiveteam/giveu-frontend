@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-flex xs12>
-      <v-card v-bind:dark="video.finished">
+      <v-card>
         <v-img v-bind:src="thumbnail">
           <v-layout pa-2 column fill-height class="white--text">
             <v-flex shrink>

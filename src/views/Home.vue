@@ -18,7 +18,7 @@ export default {
   },
   data() {
     return {
-      num_days_recent: 7,
+      num_days_recent: 2,
       channel_list: [],
       date_sorted_list: [],
       newly_added_list: [],
