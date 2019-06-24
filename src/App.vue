@@ -9,8 +9,8 @@
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class>
-          <v-btn flat to="/">이벤트</v-btn>
-          <v-btn flat to="/about">About</v-btn>
+          <v-btn flat to="/">오늘의 나눔</v-btn>
+          <v-btn flat to="/nanum_king">나눔왕</v-btn>
         </v-toolbar-items>
       </v-toolbar>
 
@@ -19,7 +19,7 @@
       </v-content>
 
       <v-footer app class="pa-3">
-        <v-spacer></v-spacer>여기 footer인데, 배너광고 ㄱㄱ?
+        <v-spacer></v-spacer>배너
       </v-footer>
     </v-app>
   </div>

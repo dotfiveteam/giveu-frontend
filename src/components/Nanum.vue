@@ -5,12 +5,11 @@
         <v-expansion-panel>
           <v-expansion-panel-content>
             <template v-slot:header>
-              <div class="subheading font-weight-bold">{{channel_name}}</div>
+              <div class="subheading font-weight-bold">{{ category }}</div>
             </template>
             <v-layout row wrap>
-              <v-flex v-for="video in videos" v-bind:key="video.id" xs12>
-                <!-- <EventItem v-if="video.is_donate_video" v-bind:video="video"/> -->
-                <EventItem v-bind:video="video"/>
+              <v-flex v-for="video in videos" v-bind:key="video.id" xs12 md4>
+                <NanumCard v-bind:video="video"/>
               </v-flex>
             </v-layout>
           </v-expansion-panel-content>
@@ -21,16 +20,16 @@
 </template>
 
 <script>
-import EventItem from "./EventItem";
+import NanumCard from "./NanumCard";
 
 export default {
-  name: "Events",
+  name: "Nanum",
   components: {
-    EventItem
+    NanumCard
   },
-  props: ["channel_name", "videos"]
+  props: ["category", "videos"]
 };
 </script>
 
-<style scoped>
+<style>
 </style>
