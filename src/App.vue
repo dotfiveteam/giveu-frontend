@@ -18,7 +18,7 @@
         <v-container text-xs-center fluid grid-list-lg>
           <v-layout row wrap>
             <v-flex md2 hidden-sm-and-down>
-              <v-card dark>
+              <v-card min-height="80vh" height="100%">
                 <v-card-text class="px-0">배너</v-card-text>
               </v-card>
             </v-flex>
@@ -26,7 +26,7 @@
               <router-view/>
             </v-flex>
             <v-flex md2 hidden-sm-and-down>
-              <v-card dark>
+              <v-card min-height="80vh" height="100%">
                 <v-card-text class="px-0">배너</v-card-text>
               </v-card>
             </v-flex>

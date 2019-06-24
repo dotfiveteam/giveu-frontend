@@ -6,7 +6,7 @@
           <v-layout pa-2 column fill-height class="white--text">
             <v-flex shrink>
               <v-card-title class="pa-0 text-outline">
-                <h1>{{channel}}</h1>
+                <h2>{{channel}}</h2>
               </v-card-title>
             </v-flex>
             <v-card-text class="text-outline">{{title}}</v-card-text>
@@ -43,7 +43,7 @@ export default {
       published_date: new Date(this.video.published_at)
         .toISOString()
         .substring(0, 10),
-      end_date: "몰라" //new Date().toISOString().substring(0, 10) // 하드코딩됨! ----------------------------------------------------------------
+      end_date: "몰라" //new Date().toISOString().sub~string(0, 10) // 하드코딩됨! ----------------------------------------------------------------
     };
   },
   methods: {

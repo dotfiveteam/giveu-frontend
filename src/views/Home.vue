@@ -34,17 +34,23 @@ export default {
       .then(response => {
         this.channel_list = response.data;
         // list all videos into a new array
+        let video_list = [];
         for (let i = 0; i < this.channel_list.length; i++) {
           for (let j = 0; j < this.channel_list[i].videos.length; j++) {
             let new_video = this.channel_list[i].videos[j];
             new_video["channel"] = this.channel_list[i].name;
-            this.date_sorted_list.push(new_video);
+            video_list.push(new_video);
           }
         }
         // sort videos
-        this.date_sorted_list.sort(function(a, b) {
-          return new Date(a.published_at) < new Date(b.published_at);
+        video_list.sort(function(a, b) {
+          return a.published_at < b.published_at
+            ? 1
+            : a.published_at > b.published_at
+            ? -1
+            : 0;
         });
+        this.date_sorted_list = video_list;
         // extract newly added
         let today = new Date();
         today.setDate(today.getDate() - this.num_days_recent);
