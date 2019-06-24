@@ -15,11 +15,28 @@
       </v-toolbar>
 
       <v-content>
-        <router-view/>
+        <v-container text-xs-center fluid grid-list-lg>
+          <v-layout row wrap>
+            <v-flex md2 hidden-sm-and-down>
+              <v-card dark>
+                <v-card-text class="px-0">배너</v-card-text>
+              </v-card>
+            </v-flex>
+            <v-flex xs12 md8>
+              <router-view/>
+            </v-flex>
+            <v-flex md2 hidden-sm-and-down>
+              <v-card dark>
+                <v-card-text class="px-0">배너</v-card-text>
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-container>
       </v-content>
 
-      <v-footer app class="pa-3">
-        <v-spacer></v-spacer>배너
+      <v-footer app>
+        <v-spacer></v-spacer>
+        <v-flex xs12 text-xs-center>배너</v-flex>
       </v-footer>
     </v-app>
   </div>

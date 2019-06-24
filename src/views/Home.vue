@@ -2,7 +2,7 @@
   <div>
     <v-card>
       <Nanum category="새로 등록된 나눔" v-bind:videos="newly_added_list"/>
-      <Nanum category="곧 끝날 나눔" v-bind:videos="ending_soon_list"/>
+      <!-- <Nanum category="곧 끝날 나눔" v-bind:videos="ending_soon_list"/> -->
       <Nanum category="진행중인 나눔" v-bind:videos="date_sorted_list"/>
     </v-card>
   </div>
