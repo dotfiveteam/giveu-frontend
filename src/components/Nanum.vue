@@ -1,23 +1,16 @@
 <template>
   <div>
-    <v-container fluid grid-list-lg>
-      <v-layout justify-center row wrap>
-        <v-expansion-panel>
-          <v-expansion-panel-content>
-            <template v-slot:header>
-              <div class="subheading font-weight-bold">{{ category }} ({{num_videos}})</div>
-            </template>
-            <v-layout row wrap>
-              <v-flex v-for="video in videos" v-bind:key="video.id" xs12 md4>
-                <NanumCard v-bind:video="video"/>
-              </v-flex>
-              <v-flex v-if="num_videos == 0">
-                <v-flex xs12 text-xs-center>등록된 비디오가 없습니다</v-flex>
-              </v-flex>
-            </v-layout>
-          </v-expansion-panel-content>
-        </v-expansion-panel>
-      </v-layout>
+    <v-container fluid grid-list-sm pa-0>
+      <v-card>
+        <v-layout justify-center row wrap>
+          <v-flex xs12>
+            <v-card-title class="subheading font-weight-bold">{{ category }} ({{num_videos}})</v-card-title>
+          </v-flex>
+          <v-flex v-for="video in videos" v-bind:key="video.id" xs12 md4>
+            <NanumCard v-bind:video="video"/>
+          </v-flex>
+        </v-layout>
+      </v-card>
     </v-container>
   </div>
 </template>
@@ -36,7 +29,7 @@ export default {
     };
   },
   props: ["category", "videos"],
-  updated() {
+  beforeUpdate() {
     this.num_videos = this.videos.length;
   }
 };

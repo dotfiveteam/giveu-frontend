@@ -3,7 +3,7 @@
     <v-app>
       <!-- <v-navigation-drawer app></v-navigation-drawer> -->
 
-      <v-toolbar app>
+      <v-toolbar app dense>
         <v-toolbar-title>
           <h1>Give U</h1>
         </v-toolbar-title>
@@ -15,11 +15,11 @@
       </v-toolbar>
 
       <v-content>
-        <v-container text-xs-center fluid grid-list-lg>
-          <v-layout row wrap>
+        <v-container text-xs-center fluid pa-0>
+          <v-layout>
             <v-flex md2 hidden-sm-and-down>
               <v-card min-height="80vh" height="100%">
-                <v-card-text class="px-0">배너</v-card-text>
+                <v-card-text>배너</v-card-text>
               </v-card>
             </v-flex>
             <v-flex xs12 md8>
@@ -27,17 +27,17 @@
             </v-flex>
             <v-flex md2 hidden-sm-and-down>
               <v-card min-height="80vh" height="100%">
-                <v-card-text class="px-0">배너</v-card-text>
+                <v-card-text>배너</v-card-text>
               </v-card>
             </v-flex>
           </v-layout>
         </v-container>
       </v-content>
 
-      <v-footer app>
+      <!-- <v-footer app>
         <v-spacer></v-spacer>
         <v-flex xs12 text-xs-center>배너</v-flex>
-      </v-footer>
+      </v-footer>-->
     </v-app>
   </div>
 </template>

@@ -3,7 +3,7 @@
     <v-flex xs12>
       <v-card>
         <v-img v-bind:src="thumbnail">
-          <v-layout pa-2 column fill-height class="white--text">
+          <v-layout pa-3 column fill-height class="white--text">
             <v-flex shrink>
               <v-card-title class="pa-0 text-outline">
                 <h2>{{channel}}</h2>

@@ -1,11 +1,8 @@
 <template>
   <div>
-    <v-card>
-      <h1>오늘의 나눔</h1>
-      <Nanum category="새로 등록된 나눔" v-bind:videos="newly_added_list"/>
-      <!-- <Nanum category="곧 끝날 나눔" v-bind:videos="ending_soon_list"/> -->
-      <Nanum category="진행중인 나눔" v-bind:videos="date_sorted_list"/>
-    </v-card>
+    <Nanum category="새로 등록된 나눔" v-bind:videos="newly_added_list"/>
+    <!-- <Nanum category="곧 끝날 나눔" v-bind:videos="ending_soon_list"/> -->
+    <Nanum category="진행중인 나눔" v-bind:videos="date_sorted_list"/>
   </div>
 </template>
 
@@ -19,7 +16,7 @@ export default {
   },
   data() {
     return {
-      num_days_recent: 2,
+      num_days_recent: 10,
       channel_list: [],
       date_sorted_list: [],
       newly_added_list: [],
