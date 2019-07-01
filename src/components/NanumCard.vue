@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-flex xs12>
-      <v-card>
+      <v-card class="mb-1">
         <v-img v-bind:src="thumbnail">
           <v-layout pa-3 column fill-height class="white--text">
             <v-flex shrink>
@@ -16,7 +16,7 @@
             <v-spacer></v-spacer>
             <v-card-text class="pa-0 text-xs-right caption font-weight-thin text-outline">
               등록일: {{published_date}}
-              <br>
+              <br />
               만료일: {{end_date}}
             </v-card-text>
           </v-layout>

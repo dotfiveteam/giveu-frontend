@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-flex xs12 class="py-2">
+    <v-flex xs12 class="pb-2">
       <v-btn-toggle mandatory v-model="nanum_toggle_exclusive">
         <v-btn flat>신규</v-btn>
         <v-btn flat>진행중</v-btn>

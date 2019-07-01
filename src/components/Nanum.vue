@@ -1,15 +1,12 @@
 <template>
   <div>
     <v-container fluid grid-list-sm pa-0>
-      <v-card>
-        <v-layout justify-center row wrap>
-          <v-flex xs12></v-flex>
-          <v-flex v-for="video in videos" v-bind:key="video.id" xs12 md4>
-            <NanumCard v-bind:video="video" />
-          </v-flex>
-          <p v-if="num_videos === 0">등록된 비디오가 없습니다.</p>
-        </v-layout>
-      </v-card>
+      <v-layout justify-center row wrap>
+        <v-flex v-for="video in videos" v-bind:key="video.id" xs12 md4>
+          <NanumCard v-bind:video="video" />
+        </v-flex>
+        <p class="pt-3" v-if="num_videos === 0">등록된 비디오가 없습니다.</p>
+      </v-layout>
     </v-container>
   </div>
 </template>
