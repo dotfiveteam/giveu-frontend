@@ -7,7 +7,7 @@
             <v-layout row wrap>
               <v-flex xs1>
                 <v-card-title>
-                  <h2>{{index}}</h2>
+                  <h2>{{index+1}}</h2>
                 </v-card-title>
               </v-flex>
               <v-flex xs3>

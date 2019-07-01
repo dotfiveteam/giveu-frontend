@@ -5,8 +5,8 @@
         <v-layout pa-2 column>
           <v-layout row wrap pa-2>
             <v-flex xs4>
-              <v-avatar size="100%" v-on:click="goToVideo">
-                <v-img v-bind:src="thumbnail"></v-img>
+              <v-avatar size="100%">
+                <v-img v-bind:src="thumbnail" v-on:click="goToVideo"></v-img>
               </v-avatar>
             </v-flex>
             <v-flex xs8>
@@ -14,7 +14,7 @@
                 <h3 fill-height>{{video_title}}</h3>
               </v-card-title>
               <v-spacer></v-spacer>
-              <v-card-text class="pa-0 text-xs-right">{{channel_name}}</v-card-text>
+              <v-card-text class="pa-0 text-xs-right">채널: {{channel_name}}</v-card-text>
               <v-card-text class="pa-0 text-xs-right">나눔품: {{reward}}</v-card-text>
               <v-card-text
                 class="pa-0 text-xs-right caption font-weight-thin"
