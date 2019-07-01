@@ -13,14 +13,5 @@ export default new Router({
       name: 'home',
       component: Home,
     },
-    {
-      path: '/nanum_king',
-      name: 'nanun_king',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ './views/NanumKing.vue'),
-    },
   ],
 })

@@ -7,11 +7,11 @@
         <v-toolbar-title>
           <h1>Give U</h1>
         </v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-toolbar-items class>
+        <!-- <v-spacer></v-spacer>
+        <v-toolbar-items>
           <v-btn flat to="/">오늘의 나눔</v-btn>
           <v-btn flat to="/nanum_king">나눔왕</v-btn>
-        </v-toolbar-items>
+        </v-toolbar-items>-->
       </v-toolbar>
 
       <v-content>
@@ -23,7 +23,7 @@
               </v-card>
             </v-flex>
             <v-flex xs12 md8>
-              <router-view/>
+              <router-view />
             </v-flex>
             <v-flex md2 hidden-sm-and-down>
               <v-card min-height="80vh" height="100%">

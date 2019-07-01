@@ -2,22 +2,26 @@
   <div>
     <v-flex xs12 class="py-2">
       <v-btn-toggle mandatory v-model="nanum_toggle_exclusive">
-        <v-btn flat>새로 등록된 나눔</v-btn>
-        <v-btn flat>진행중인 나눔</v-btn>
+        <v-btn flat>신규</v-btn>
+        <v-btn flat>진행중</v-btn>
+        <v-btn flat>나눔왕</v-btn>
       </v-btn-toggle>
     </v-flex>
     <Nanum v-if="nanum_toggle_exclusive === 0" v-bind:videos="newly_added_list" />
     <Nanum v-if="nanum_toggle_exclusive === 1" v-bind:videos="date_sorted_list" />
+    <NanumKing v-if="nanum_toggle_exclusive === 2" />
   </div>
 </template>
 
 <script>
 import Nanum from "../components/Nanum";
+import NanumKing from "../components/NanumKing";
 
 export default {
   name: "Home",
   components: {
-    Nanum
+    Nanum,
+    NanumKing
   },
   data() {
     return {
