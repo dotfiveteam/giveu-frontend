@@ -5,7 +5,6 @@
         <v-flex v-for="video in videos" v-bind:key="video.id" xs12 md4>
           <NanumCard v-bind:video="video" />
         </v-flex>
-        <p class="pt-3" v-if="num_videos === 0">등록된 비디오가 없습니다.</p>
       </v-layout>
     </v-container>
   </div>
@@ -27,6 +26,7 @@ export default {
   props: ["videos"],
   beforeUpdate() {
     this.num_videos = this.videos.length;
+    console.log("Nanum.vue beforeUpdate(): " + this.num_videos);
   }
 };
 </script>

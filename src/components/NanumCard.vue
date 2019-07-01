@@ -2,28 +2,26 @@
   <div>
     <v-flex xs12>
       <v-card class="mb-1">
-        <v-img v-bind:src="thumbnail">
-          <v-layout pa-3 column fill-height class="white--text">
-            <v-flex shrink>
-              <v-card-title class="pa-0 text-outline">
-                <h2>{{channel}}</h2>
-              </v-card-title>
+        <v-layout pa-2 column>
+          <v-layout row wrap pa-2>
+            <v-flex xs4>
+              <v-avatar size="100%" v-on:click="goToVideo">
+                <v-img v-bind:src="thumbnail"></v-img>
+              </v-avatar>
             </v-flex>
-            <v-card-text class="text-outline">{{title}}</v-card-text>
-            <v-card-text class="pa-0 text-xs-right text-outline">
-              <h3>나눔: {{reward}}</h3>
-            </v-card-text>
-            <v-spacer></v-spacer>
-            <v-card-text class="pa-0 text-xs-right caption font-weight-thin text-outline">
-              등록일: {{published_date}}
-              <br />
-              만료일: {{end_date}}
-            </v-card-text>
+            <v-flex xs8>
+              <v-card-title class="pa-0">
+                <h3 fill-height>{{video_title}}</h3>
+              </v-card-title>
+              <v-spacer></v-spacer>
+              <v-card-text class="pa-0 text-xs-right">{{channel_name}}</v-card-text>
+              <v-card-text class="pa-0 text-xs-right">나눔품: {{reward}}</v-card-text>
+              <v-card-text
+                class="pa-0 text-xs-right caption font-weight-thin"
+              >등록일: {{published_date}} | 만료일: {{end_date}}</v-card-text>
+            </v-flex>
           </v-layout>
-        </v-img>
-        <v-card-actions>
-          <v-btn outline block v-on:click="GoToVideo">ㄱㄱ</v-btn>
-        </v-card-actions>
+        </v-layout>
       </v-card>
     </v-flex>
   </div>
@@ -35,8 +33,8 @@ export default {
   props: ["video"],
   data() {
     return {
-      channel: this.video.channel,
-      title: this.video.title,
+      channel_name: this.video.channel,
+      video_title: this.video.title,
       reward: "몰라", // 하드코딩됨! ------------------------------------------------------------------------------------------------------
       thumbnail: this.video.thumbnail, //"https://img.youtube.com/vi/" + this.video.video_id + "/0.jpg",
       link: "https://www.youtube.com/watch?v=" + this.video.video_id,
@@ -47,7 +45,7 @@ export default {
     };
   },
   methods: {
-    GoToVideo() {
+    goToVideo() {
       window.location.href = this.link;
     }
   }
